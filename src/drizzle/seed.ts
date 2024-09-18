@@ -70,73 +70,75 @@ const dummyPosts = [
     title: 'The best IDE for web development',
     content:
       'Visual Studio Code is the best IDE for web development. It provides a wide range of features and extensions that make the development process more efficient and enjoyable.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/105309205?s=80&v=4',
   },
   {
     title: 'The best programming language',
     content:
       'JavaScript is the best programming language. It is versatile, easy to learn, and widely used in web development.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl:
+      'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png',
   },
   {
     title: 'The future of Artificial Intelligence',
     content:
       'AI is going to revolutionize the way we live and work. It has the potential to automate tasks, improve decision making, and create new products and services.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/1587191?s=80&v=4',
   },
   {
     title: 'The benefits of using Docker for containerization',
     content:
       'Docker makes it easy to deploy and manage applications. It provides a consistent environment, reduces conflicts, and improves scalability.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl:
+      'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png',
   },
   {
     title: "The importance of cybersecurity in today's world",
     content:
       'Cybersecurity is crucial for protecting our personal and professional data. It helps prevent unauthorized access, data breaches, and identity theft.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/1030588?s=80&v=4',
   },
   {
     title: 'The role of DevOps in modern software development',
     content:
       'DevOps helps bridge the gap between development and operations teams. It improves collaboration, automation, and efficiency in the software development lifecycle.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/104701598?s=80&v=4',
   },
   {
     title: 'The advantages of using GraphQL for API development',
     content:
       'GraphQL provides a flexible and efficient way to build APIs. It allows clients to request only the data they need, reducing over-fetching and under-fetching.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/12972006?s=80&v=4',
   },
   {
     title: 'The impact of 5G on mobile app development',
     content:
       '5G is going to enable faster and more reliable mobile app development. It will support new technologies like augmented reality, virtual reality, and the Internet of Things.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/388785?s=80&v=4',
   },
   {
     title: 'The benefits of using Kubernetes for cloud management',
     content:
       'Kubernetes provides a scalable and efficient way to manage cloud resources. It automates the deployment, scaling, and management of containerized applications.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/13629408?s=80&v=4',
   },
   {
     title: 'The role of machine learning in data analysis',
     content:
       'Machine learning helps uncover insights and patterns in data. It can be used for predictive analytics, recommendation systems, and fraud detection.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/45942048?s=80&v=4',
   },
   {
     title: 'The importance of accessibility in web development',
     content:
       'Accessibility is crucial for ensuring that websites are usable by everyone. It helps people with disabilities navigate, understand, and interact with web content.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/379216?s=80&v=4',
   },
   {
     title: 'The benefits of using TypeScript for JavaScript development',
     content:
       'TypeScript provides a more robust and maintainable way to write JavaScript code. It adds static types, interfaces, and other features to help catch errors and improve code quality.',
-    imageUrl: 'https://avatars.githubusercontent.com/u/108928776?s=200&v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/44734090?s=80&v=4',
   },
 ];
 
