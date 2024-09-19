@@ -1,11 +1,14 @@
 'use server';
 
-import { UTApi } from 'uploadthing/server';
-import { formSchema } from '@/validations/new-post-form';
 import sharp from 'sharp';
+import { UTApi } from 'uploadthing/server';
+import { revalidatePath } from 'next/cache';
 import { v4 as uuid4 } from 'uuid';
+
+import { formSchema } from '@/validations/new-post-form';
 import { db } from '@/drizzle/db';
 import { posts, users } from '@/drizzle/schema';
+import { addLike } from '@/drizzle/queries';
 
 interface FormState {
   title: string;
@@ -13,7 +16,7 @@ interface FormState {
   image: string;
 }
 
-export async function createPost(prevFormState: FormState, formData: FormData) {
+export async function createPost(_: FormState, formData: FormData) {
   const title = formData.get('title') as string;
   const content = formData.get('content') as string;
   const image = formData.get('image') as File;
@@ -85,4 +88,11 @@ export async function createPost(prevFormState: FormState, formData: FormData) {
   });
 
   return errors;
+}
+
+export async function likePost(postId: string) {
+  const userId = 'd7cb0ce2-1c5e-47cb-98a4-092af666cac6';
+  await addLike(postId, userId);
+
+  revalidatePath('/');
 }
