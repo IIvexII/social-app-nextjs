@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card } from '../ui/card';
-import { Heart } from 'lucide-react';
+import LikeButton from './form/likeButton';
 
 interface PostProps {
   post: {
@@ -38,9 +38,7 @@ export function Post({ post }: PostProps) {
 
         <p className='text-gray-300 hyphens-auto'>{post.content}</p>
       </div>
-      <div className='px-6 py-6'>
-        <Heart />
-      </div>
+      <LikeButton liked={true} />
     </Card>
   );
 }
