@@ -1,8 +1,10 @@
 import { Post } from '@/components/custom/post';
 import { db } from '@/drizzle/db';
+import { posts } from '@/drizzle/schema';
+import { asc, desc } from 'drizzle-orm';
 
 export default async function Home() {
-  const posts = await db.query.posts.findMany({
+  const allPosts = await db.query.posts.findMany({
     with: {
       user: {
         columns: {
@@ -10,11 +12,10 @@ export default async function Home() {
         },
       },
     },
+    orderBy: [desc(posts.createdAt)],
   });
 
-  console.log(posts);
-
-  if (posts.length === 0) {
+  if (allPosts.length === 0) {
     return (
       <div className='bg-white/5 p-4 rounded-xl'>
         <h2 className='text-2xl text-center font-semibold tracking-wide'>
@@ -25,12 +26,12 @@ export default async function Home() {
   }
 
   return (
-    <div className='bg-white/5 px-12 py-6 rounded-xl mt-8'>
+    <div className='bg-white/5 p-12 rounded-xl mt-8'>
       <h2 className='text-2xl text-center font-semibold tracking-wide mb-10'>
         All Posts by all users
       </h2>
       <div className='flex flex-col gap-6'>
-        {posts.map((post) => (
+        {allPosts.map((post) => (
           <Post key={post.id} post={post} />
         ))}
       </div>

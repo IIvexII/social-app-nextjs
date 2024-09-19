@@ -7,7 +7,7 @@ interface PostProps {
     imageUrl: string;
     title: string;
     content: string;
-    createdAt: string | null;
+    createdAt: Date;
     user: {
       firstName: string | null;
     } | null;
@@ -15,6 +15,7 @@ interface PostProps {
 }
 
 export function Post({ post }: PostProps) {
+  console.log(post);
   return (
     <Card className='flex flex-row gap-8'>
       <div className='rounded-s-lg max-w-32 w-full flex justify-center items-center'>
@@ -26,17 +27,18 @@ export function Post({ post }: PostProps) {
           className='!relative object-cover rounded-lg'
         />
       </div>
-      <div className='py-4 flex flex-col gap-3'>
+      <div className='py-4 flex flex-col gap-3 grow'>
         <div className='flex flex-col gap-1'>
           <h2 className='text-xl font-semibold'>{post.title}</h2>
           <p className='text-gray-400 '>
-            Shared by {post.user?.firstName} at {post.createdAt}
+            Shared by {post.user?.firstName} at{' '}
+            {post.createdAt.toLocaleString()}
           </p>
         </div>
 
         <p className='text-gray-300 hyphens-auto'>{post.content}</p>
       </div>
-      <div className='px-6 py-4'>
+      <div className='px-6 py-6'>
         <Heart />
       </div>
     </Card>
