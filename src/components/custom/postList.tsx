@@ -5,7 +5,7 @@ import { Post } from '@/components/custom/post';
 import { useOptimistic } from 'react';
 
 interface Post {
-  id: any;
+  id: string;
   imageUrl: string;
   title: string;
   content: string;

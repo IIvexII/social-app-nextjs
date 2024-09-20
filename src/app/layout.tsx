@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='dark max-w-screen-lg mx-auto'>
+      <body className='dark max-w-screen-lg mx-auto px-8'>
         <MainHeader />
         {children}
       </body>

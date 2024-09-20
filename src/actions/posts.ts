@@ -9,6 +9,7 @@ import { formSchema } from '@/validations/new-post-form';
 import { db } from '@/drizzle/db';
 import { posts, users } from '@/drizzle/schema';
 import { addLike } from '@/drizzle/queries';
+import { redirect } from 'next/navigation';
 
 interface FormState {
   title: string;
@@ -36,11 +37,6 @@ export async function createPost(_: FormState, formData: FormData) {
       const field = error.path[0] as keyof FormState;
       errors[field] = error.message;
     });
-  }
-
-  // / check if the uploaded file is an image
-  if (image && !image.type.startsWith('image/')) {
-    errors.image = 'Uploaded file must be an image';
     return errors;
   }
 
@@ -99,4 +95,5 @@ export async function likePost(postId: string) {
   await addLike(postId);
 
   revalidatePath('/');
+  redirect('/');
 }

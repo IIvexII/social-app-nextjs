@@ -8,12 +8,16 @@ export function SubmitButton() {
 
   if (pending) {
     return (
-      <Button type='submit' disabled>
+      <Button type='submit' variant={'pinkish'} disabled>
         <LoaderCircle className='mr-2 h-4 w-4 animate-spin duration-200' />
         Creating Post
       </Button>
     );
   } else {
-    return <Button type='submit'>Create Post</Button>;
+    return (
+      <Button variant={'pinkish'} type='submit'>
+        Create Post
+      </Button>
+    );
   }
 }
