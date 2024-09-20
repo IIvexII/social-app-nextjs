@@ -3,7 +3,7 @@ import { likes, posts, users } from '@/drizzle/schema';
 import { and, count, desc, eq } from 'drizzle-orm';
 
 export async function getAllPostsWithLikes() {
-  const userId = 'd7cb0ce2-1c5e-47cb-98a4-092af666cac6';
+  const userId = '20a43bae-af1d-4c62-a934-77ac23f88da1';
 
   const allPosts = await db
     .select({
@@ -32,7 +32,8 @@ export async function getAllPostsWithLikes() {
   return modifiedPosts;
 }
 
-export async function addLike(postId: string, userId: string) {
+export async function addLike(postId: string) {
+  const userId = '20a43bae-af1d-4c62-a934-77ac23f88da1';
   const liked = await db
     .select()
     .from(likes)

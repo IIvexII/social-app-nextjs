@@ -75,6 +75,11 @@ export async function createPost(_: FormState, formData: FormData) {
     return errors;
   }
 
+  if (imageUrl === '') {
+    errors.image = 'Failed to upload image';
+    return errors;
+  }
+
   // get random user from database
   const allUsers = await db.select().from(users);
   const randomUser = allUsers[Math.floor(Math.random() * allUsers.length)];
@@ -91,8 +96,7 @@ export async function createPost(_: FormState, formData: FormData) {
 }
 
 export async function likePost(postId: string) {
-  const userId = 'd7cb0ce2-1c5e-47cb-98a4-092af666cac6';
-  await addLike(postId, userId);
+  await addLike(postId);
 
   revalidatePath('/');
 }
